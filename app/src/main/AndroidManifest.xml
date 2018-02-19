@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.applefish.smartshopsyria">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <application
+        android:name="com.applefish.smartshopsyria.app.SmartShop"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher3"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.applefish.smartshopsyria.fcm.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.applefish.smartshopsyria.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.SplashScreenActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.OffersActivity"
+            android:label="@string/title_activity_offers"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.FavoriteActivity"
+            android:label="@string/title_activity_favorite"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.SearchActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.applefish.smartshopsyria.activities.SearchAgent"
+            android:label="@string/title_activity_search_agent"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+
+        <activity android:name="com.applefish.smartshopsyria.activities.ImagesViewerActivity"
+            android:label="@string/title_activity_images_viewer"
+            android:parentActivityName="com.applefish.smartshopsyria.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applefish.smartshopsyria.activities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

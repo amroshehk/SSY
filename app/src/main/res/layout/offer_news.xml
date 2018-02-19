@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/cardview"
+android:layout_margin="2dp"
+card_view:cardBackgroundColor="#FCFCFB"
+card_view:cardCornerRadius="10dp"
+card_view:cardElevation="3dp"
+card_view:contentPadding="2dp"
+android:foreground="?android:selectableItemBackground"
+android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_gravity="center">
+
+
+        <TextView
+                android:text="Added Date 2017-8-8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/offerdate"
+                android:textSize="18sp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_alignParentTop="true"
+                />
+
+        <TextView
+            android:text="Check out the catalog for Al Maya supermarkets weekly offers on Grocery products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/offerTitle"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/offerdate"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:text="ocations : AJMAN : Ajman RAK rd ; Al Shaali Tower ; Ajman Al Bader street ; DUBAI : Burdubai ; Mamzar Center ; Barsha ; Deira ; Dubai Hamriya ; Al Reef Mall ; Silicon Gate 1 ; Dream Tower ; Lamcy Plaza ; Satwa ; Almaya mart Diyafah ; shop n save al qusais ; SHARJAH : Sharjah Al nahda Area ; Sharjah Rolla Area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/offerlocation"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_below="@+id/offerTitle"
+            android:layout_marginTop="10dp"
+ />
+
+        <Button
+                android:text="show"
+                android:textStyle="bold"
+            android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.Button"
+                android:id="@+id/showBTN"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/offerlocation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.applefish.smartshopsyria.activities.MainActivity"
+    >
+
+
+
+    <ProgressBar
+        android:theme="@style/CircularProgress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/progressbar_foralltabs"
+        android:layout_gravity="center"
+
+        />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:background="#fff"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@drawable/gradient_background"
+             app:popupTheme="@style/AppTheme.PopupOverlay"
+
+            >
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/co4"
+                    android:id="@+id/imageView4"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+               />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Smart Shop"
+                    android:gravity="top"
+                   android:paddingTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+
+                    android:id="@+id/textView6"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <!--android:background="@drawable/tablayout_background"-->
+        </android.support.v7.widget.Toolbar>
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tabs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:background="@drawable/gradient_background"-->
+            <!--app:tabMode="fixed"-->
+            <!--app:tabIndicatorColor="@color/white"-->
+            <!--app:tabBackground="@drawable/tab_color_selector"-->
+            <!--app:tabTextColor="@color/white"-->
+            <!--app:tabSelectedTextColor="@color/white"-->
+            <!--app:tabIndicatorHeight="5dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--&gt;-->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/customborder9"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/gradient_blue1"
+            app:tabBackground="@drawable/tab_color_selector"
+            app:tabTextColor="@color/colorPrimaryDark"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorHeight="4dp"
+            android:layout_marginTop="1dp"
+
+            android:padding="2dp"
+
+             >
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@id/tabs"
+
+        >
+        <!--android:layout_below="@id/tabs"-->
+
+    </android.support.v4.view.ViewPager>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_search_white_24dp" />
+</android.support.design.widget.CoordinatorLayout>
